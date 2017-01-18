@@ -1,0 +1,12 @@
+<div class="row text-right details_shops">
+    <span class="glyphicon glyphicon-shopping-cart details_shops_font" ng-click="cart()"></span>
+    <ul  class="menu_shops_show">
+        <li ng-repeat="item in carts">
+            <span>{{item.name}}</span>
+            <span>{{item.price | currency: "¥"}}</span>
+            <span>*{{item.number}}</span>
+        </li>
+        <li><a href="#/balance" class="btn btn-primary">结算</a></li>
+    </ul>
+    <span class="numbers" ng-if="active">{{numbers}}</span>
+</div>

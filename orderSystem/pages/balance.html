@@ -1,0 +1,70 @@
+<!--内容-->
+<section class="balance_page">
+    <h2 class="text-center">结账页</h2>
+    <div class="row table_content">
+        <div class="col-lg-8 col-lg-offset-2">
+            <!--点菜详细-->
+            <table class="table table-striped table-hover" id="balance_table">
+                <tr id="balance_tr">
+                    <th class="col-lg-2 text-center"></th>
+                    <th class="col-lg-2 text-center"><h3>菜名</h3></th>
+                    <th class="col-lg-1 text-center"><h3>单价</h3></th>
+                    <th class="col-lg-2 text-center"><h3>数量</h3></th>
+                    <th class="col-lg-3 text-center"><h3>小计</h3></th>
+                    <th class="col-lg-1 text-center"><h3>删除</h3></th>
+                    <th class="col-lg-1 text-center"><h3>留言</h3></th>
+                </tr>
+                <tr class="row balance_td" ng-repeat="x in carts" on-finish>
+                    <!--菜品图片-->
+                    <td class="td_img">
+                        <img ng-src={{x.img}} alt="图片加载中" title="美食">
+                    </td>
+                    <!--菜品名称-->
+                    <td class="text-center">
+                        <span>{{x.name}}</span>
+                    </td>
+                    <!--菜品价格-->
+                    <td class="text-center">
+                        <span class="univalence">{{(x.price) | currency:"¥"}}</span>
+                    </td>
+                    <!--菜品数量-->
+                    <td class="text-center balance_number">
+                        <button type="button" class="btn-info minus" ng-click="minus($index)">-</button>
+                        <span class="number">{{x.number}}</span>
+                        <button type="button" class="btn-info add" ng-click="add($index)">+</button>
+                    </td>
+                    <!--菜品小计-->
+                    <td class="text-center">
+                        <span class="price">{{(x.price) | currency:"¥"}}</span>
+                    </td>
+                    <!--删除-->
+                    <td class="text-center">
+                        <button class="btn btn-danger" type="button" ng-click="remove($index)">删除</button>
+                    </td>
+                    <!--留言-->
+                    <td class="text-center">
+                        <textarea name="leaveMessage" maxlength="20" cols="20" rows="4" placeholder="您的要求:"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="intall row">
+                <div class="last col-sm-3 col-sm-offset-6 text-right">合计：<span>{{inTall_one}}</span></div>
+                <button type="button" data-toggle="modal" data-target=".bs-example-modal-sm" class="btn btn-danger col-sm-2" id="InTall" ng-click="inTall()">结算</button>
+            </div>
+        </div>
+    </div>
+    <!--模态框-->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" id="modal-content">
+              <div>合计：<span>{{inTall_one}}</span></div>
+                <span>谢谢惠顾</span>
+                <div>
+                    <span>页面跳转还剩 </span>
+                    <span id="countDown"></span>
+                    <span>秒</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
