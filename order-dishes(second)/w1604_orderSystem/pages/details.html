@@ -1,0 +1,33 @@
+<!-- details_page -->
+<div class="details_page">
+	<div class="container-fluid details_title">
+		<div class="text-center">
+			<h2>{{details.title}}</h2>
+		</div>
+	</div>
+	<!--头部名称-->
+	<section class="container">
+		<div cart></div>
+		<!--购物车-->
+		<div alert-modal></div>
+		<!--模态框-->
+		<div class="row text-center">
+			<div class="col-md-4 col-sm-6 col-xs-6 details_menu_contain" ng-repeat="item in details.foods">
+				<div class="details_menu">
+					<a href="javascript: void(0)" data-toggle="modal" data-target="#myModal" ng-click="product(item)">
+						<img ng-src={{item.img}} class="img-responsive" alt={{item.name}} />
+						<div class="details_hover_img">
+							<span>{{item.name}}</span>
+						</div>
+                        <span class="ordered" ng-if="item.active">已点{{item.number}}</span>
+					</a>
+					<div class="details_menu_font">
+						<div class="menu_name">{{item.name}}</div>
+						<div class="menu_price">价格  <span>{{item.price | currency: "¥"}}</span></div>
+						<div class="menu_add"><a href="javascript: void(0)"  ng-click="add(item)">add</a></div>
+					</div>
+				</div>
+			</div><!--每一个的商品展示-->
+		</div>
+	</section><!--中间菜品内容-->
+</div>

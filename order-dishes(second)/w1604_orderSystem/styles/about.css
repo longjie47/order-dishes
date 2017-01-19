@@ -1,0 +1,62 @@
+.about_page {
+    margin-top: 80px;
+}
+.zhzh {
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#allmap {
+    width: 70%;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 10px;
+}
+.mar {
+    margin-bottom:20px;
+    margin-top:20px;
+    padding-left: 10px;
+}
+.martop {
+    margin-top:20px;
+}
+#name,#email {
+    width:150px;
+}
+.messtext {
+    margin-left:5px;
+}
+.mess {
+    margin-left:10px;
+    margin-bottom: 20px;
+}
+.font1 {
+    font-size:20px;
+    color: #f8af3c;
+}
+.font2 {
+    font-size:1.2em;
+}
+
+.restname {
+    font-family: cursive;
+    font-size:2.5em;
+    margin-bottom: 20px;
+}
+.form1 {
+    resize: none;
+}
+
+.send_btn button {
+    width: 60%;
+    line-height: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about_page .row {
+    margin-left: 0;
+    margin-right: 0;
+}

@@ -1,0 +1,139 @@
+.balance_page {
+    margin-top: 80px;
+}
+
+h2{
+    color: #f8af3c;
+    letter-spacing: 10px;
+}
+#balance_table .balance_td:before{
+    display: none;
+}
+#balance_tr>th>h3{
+    font-size: 1.3em;
+}
+.balance_number{
+    width: 110px;
+    padding: 0 12px;
+}
+.balance_number>span{
+    width:25px;
+    display: inline-block;
+}
+#balance_table .balance_number+td{
+    padding: 0;
+    width: 90px;
+}
+/*媒体查询*/
+@media screen and (min-width: 1200px) {
+    #balance_table .balance_td img{
+        width: 210px;
+    }
+    .balance_td>td>textarea{
+        height: 25px;
+        width: 200px;
+        font-size: 12px;
+        resize: none;
+    }
+    #balance_tr>th>h3{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 1177px){
+    #balance_table .balance_td img{
+        width: 210px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .balance_td>td>textarea{
+        height: 25px;
+        width: 200px;
+        font-size: 12px;
+        resize: none;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    .balance_td>td>textarea{
+        height: 25px;
+        width: 100px;
+        font-size: 12px;
+        resize: none;
+    }
+    #balance_table .balance_td>.td_img>img{
+        height: 100px;
+        width: 100px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .table{
+        width: 100%;
+    }
+}
+.balance_td>.text-center{
+
+    vertical-align: middle;
+}
+.balance_td>td>button{
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #f8af3c;
+    border-color: #f8af3c;
+}
+td{
+    font-size: 16px;
+    cursor: pointer;
+}
+.InTall{
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 20px;
+    border-radius: 10px;
+}
+.balance_td>td .btn-danger{
+    letter-spacing: 5px;
+    background-color: red;
+}
+td>.btn-danger:hover{
+    background-color: red;
+}
+.last>span{
+    color: red;
+    font-size: 20px;
+}
+.text-center textarea {
+    border: 1px solid #8a8787;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+.intall>div{
+    display: inline-block;
+}
+.intall>button{
+    float: right;
+    margin-right: 4%;
+}
+#modal-content{
+    height: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+#modal-content>div{
+    line-height: 100px;
+}
+#modal-content>div:first-child>span{
+    color: red;
+}
+#modal-content>span{
+    color:#f8af3c;
+}
+
+.text_content {
+    text-align: center;
+    font-size: 2em;
+    line-height: 30px;
+    padding: 20px 0;
+}

@@ -1,0 +1,72 @@
+<!-- classify_page -->
+<div class="classify_page">
+    <div class="container">
+        <div class="banner">
+            <div id="banner" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#banner" data-slide-to="0" class="active"></li>
+                    <li data-target="#banner" data-slide-to="1"></li>
+                    <li data-target="#banner" data-slide-to="2"></li>
+                    <li data-target="#banner" data-slide-to="3"></li>
+                    <li data-target="#banner" data-slide-to="4"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="images/banner/banner_001.jpg" alt="浇汁牛排">
+                        <div class="carousel-caption">
+                            <h3>浇汁牛排</h3>
+                            <p>肉嫩多汁，入口即化，足以俘获你的味蕾</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/banner/banner_002.jpg" alt="鲜虾意大利面">
+                        <div class="carousel-caption">
+                            <h3>鲜虾意大利面</h3>
+                            <p>味正，量足，满足你的整个胃</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/banner/banner_003.jpg" alt="清爽柠檬">
+                        <div class="carousel-caption">
+                            <h3>清爽柠檬</h3>
+                            <p>夏天的解暑之品，柠檬的清香弥漫你的整个味蕾</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/banner/banner_004.jpg" alt="芝士大满贯">
+                        <div class="carousel-caption">
+                            <h3>芝士大满贯</h3>
+                            <p>视觉上的体验，味觉上的体验，一并满足你</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/banner/banner_005.jpg" alt="Cappuccino">
+                        <div class="carousel-caption">
+                            <h3>Cappuccino</h3>
+                            <p>唇齿留香，充满咖啡豆的甘醇</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-repeat="items in foods | group: 3">
+            <h3>热门推荐●{{items.title}}</h3>
+            <div class="col-xs-6 col-sm-3" ng-repeat="item in items.foods | group: 4">
+                <a href="javascript: void(0)" class="box" data-toggle="modal" data-target="#myModal" ng-click="product(item)">
+                    <img ng-src={{item.img}} class="img-responsive" alt={{item.name}}>
+                    <div class="caption">
+                        <h4 class="text-center">{{item.name}}</h4>
+                        <p class="text-center">价格：{{item.price | currency: "¥"}}</p>
+                    </div>
+                    <span class="ordered" ng-if="item.active">已点{{item.number}}</span>
+                </a>
+                <button class="btn custom_btn" ng-click="add(item)">add</button>
+            </div>
+        </div>
+        <div cart></div>
+        <div alert-modal></div>
+    </div>
+</div>
